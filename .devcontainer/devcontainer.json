@@ -6,17 +6,10 @@
   },
   "customizations": {
     "vscode": {
-      "extensions": [
-        "kotlin.language",
-        "ms-dotnettools.csharp",
-        "GitHub.copilot"
-      ],
-      "settings": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
-      }
+      "extensions": ["fwcd.kotlin", "esbenp.prettier-vscode", "GitHub.copilot"],
+      "settings": {"editor.formatOnSave": true}
     }
   },
   "forwardPorts": [8080, 9090],
-  "postCreateCommand": "gradle build"
+  "postCreateCommand": "if [ -f gradlew ]; then chmod +x gradlew && ./gradlew build; elif [ -f build.gradle ] || [ -f build.gradle.kts ]; then gradle build; fi"
 }
