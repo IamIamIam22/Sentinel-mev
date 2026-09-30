@@ -1,0 +1,22 @@
+{
+  "name": "Sentinel MEV",
+  "image": "mcr.microsoft.com/devcontainers/java:1-21-bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "kotlin.language",
+        "ms-dotnettools.csharp",
+        "GitHub.copilot"
+      ],
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+      }
+    }
+  },
+  "forwardPorts": [8080, 9090],
+  "postCreateCommand": "gradle build"
+}
