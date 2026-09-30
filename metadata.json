@@ -1,0 +1,6 @@
+{
+  "name": "Sentinel MEV",
+  "description": "Smart Contract lifecycle manager, MEV discovery tracker, and Faucet automated controller command center.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
